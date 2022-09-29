@@ -1,0 +1,53 @@
+<!--pages/home/home.wxml-->
+<view class="bgimg">
+  <scroll-view class="container_marquee">
+    <view class="scrolltxt">
+      <view class="marquee_box">
+        <view class="marquee_text">
+          <text>Home Assistant连接正常</text>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+  <view class="title">
+    <p style="text-align: center;"><text class="username">{{user}}</text>的寝室信息</p>
+  </view>
+  <scroll-view class="info-scroll" scroll-x>
+    <view style="display: inline-block;" class="info-view" wx:for="{{sensors}}">
+      <view class="info-icon">
+        <image src="{{item.bigIcon}}" style="height: 230rpx;width:230rpx;border-radius:10rpx"></image>
+      </view>
+      <view class="botton_view">
+        <view class="wenzi"><text class="data-text">{{item.infoText}}</text></view>
+        <view class="next">
+          <view class="small-icon">
+            <image src="{{item.smallIcon}}" style="height: 40rpx;width:40rpx"></image>
+          </view>
+          <view><text class="data-text">{{item.dataText}}</text></view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+  <view style="display: flex;">
+  <button type="primary" bindtap="refreshInfos" style="width: 300rpx;">更新信息</button>
+  <button type="primary" bindtap="takeAPhoto" style="width: 300rpx;">拍张照片</button>
+  </view>
+  <view class="kira">
+    <view class="title">
+      <p style="text-align: center;">点击这里控制家具</p>
+    </view>
+  </view>
+  <scroll-view class="device-scroll" scroll-x>
+    <view style="display: inline-block;" class="device-view" wx:for="{{devices}}">
+      <view class="info-icon" data-index="{{index}}" bindtap="toggle">
+        <image src="{{item.pic}}" style="height: 230rpx;width:230rpx;border-radius:10rpx"></image>
+      </view>
+      <view class="botton_view">
+        <view class="wenzi"><text class="data-text">{{item.name}}</text></view>
+        <view class="next">
+          <view><text class="status-text">{{item.statusText}}</text></view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

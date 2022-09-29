@@ -1,0 +1,19 @@
+<!--pages/map/map.wxml-->
+<view class="bgimg">
+<map
+        class="myMap"
+        id="map"
+        subkey="{{key}}"
+        longitude="{{userLongitude}}"
+        latitude="{{userLatitude}}"
+        scale="12"
+        layer-style="1"
+        enable-overlooking="true"
+        enable-3D="false"
+        enable-traffic="true"
+        skew="25"
+        show-scale="true"
+        markers="{{markers}}"
+></map>
+<button type="primary" bindtap="homeSweetHome" style="width:500rpx;">Find My Way Home</button>
+</view>

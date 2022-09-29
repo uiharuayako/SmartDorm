@@ -1,0 +1,8 @@
+<!--pages/photo/photo.wxml-->
+<view class="bgimg" style="height: 100vh;padding-top: 5px;">
+  <view class="title">
+    <p style="text-align: center;">摄像头图像截取</p>
+  </view>
+  <image src="{{imgPath}}" style="width: 100%;padding-top: 10px;" mode="widthFix"></image>
+  <button type="primary" bindtap="saveImg">保存图片</button>
+</view>

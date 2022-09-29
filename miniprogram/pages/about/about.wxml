@@ -1,0 +1,3 @@
+<!--pages/about/about.wxml-->
+<text>第二组 2022 All Right Reserved</text>
+<web-view src="{{webViewSrc}}"></web-view>
